@@ -29,7 +29,7 @@ class AuthController extends Controller
         // Kiểm tra xem thông tin đăng nhập (email và mật khẩu) hợp lệ hay không
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Đăng nhập thành công, chuyển hướng người dùng đến trang khác
-            return redirect()->route('show-profile');
+            return redirect()->route('web.home.home');
         }
 
         // Đăng nhập thất bại, chuyển hướng người dùng đến trang đăng nhập lại với thông báo lỗi
@@ -53,10 +53,10 @@ class AuthController extends Controller
             $user->password = bcrypt($request->password);
         }
         $user->save();
-        return redirect()->route('show-profile')->with('success','Cap nhat thanh cong');
+        return redirect()->route('web.home.home')->with('success','Cap nhat thanh cong');
     }
     public function logout (){
         Auth::logout();
-        return redirect()->route('show-form-login');
+        return redirect()->route('web.home.home');
     }
 }

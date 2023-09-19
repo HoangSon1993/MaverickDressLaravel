@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\MyController;
 use App\Http\Controllers\Web\WebController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->middleware('checklogin');
+    return redirect()->route('web.home.home');
+});
 
 // Route::get('/khoahoc', function (){
 //    echo 'Hello Word';
@@ -70,11 +72,13 @@ Route::get('/', function () {
 //Bắt đầu tai đây
 
 Route::get('home',[WebController::class, 'home'])->name('web.home.home');
-
+Route::get('detail-product/{id}',[WebController::class, 'detailProduct'])->name('web.home.detailProduct');
+Route::get('/search-product',[WebController::class,'search'])->name('web.home.search');
 
 
 Route::prefix('admin')->middleware('admin')->group(function (){
     Route::get('get-product',[WebController::class,'getProduct'])->name('admin.home.get-product');
+
 
     Route::get('create-product',[WebController::class,'createProduct'])->name('admin.home.create-product');
     Route::post('store-product',[WebController::class,'storeProduct'])->name('admin.home.store-product');
@@ -103,6 +107,14 @@ Route::middleware('checklogin')->group(function(){
     Route::put('profile',[AuthController::class,'profile'])->name('profile');
 });
 
+//Add to cart route
+Route::post('add-to-cart',[CardController::class,'add_to_cart']);
+Route::get('delete-cart/{id}',[CardController::class,'delete']);
+Route::post('/clear-cart', [CartController::class,'clearCart'])->name('cart.clear');
+
+
+//Check out route
+Route::get('/checkout',[CheckoutController::class,'index']);
 
 
 

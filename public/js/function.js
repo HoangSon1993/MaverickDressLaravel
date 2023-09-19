@@ -53,7 +53,7 @@ function loadData(arr) {
                     }
                     // su kien click cho heart
 
-                    //Them number cho Bag    
+                    //Them number cho Bag
                     let listCart1 = document.querySelectorAll('#top-banner-icons-basket #modal-bag .modal-dialog .cart-product .product-block-container');
                     document.getElementById('top-banner-icon-basket-qty').innerHTML = listCart1.length;
                     var total = 0;
@@ -123,8 +123,8 @@ function sortByName(a, b) {
 
 function sortByValueIncrease(a, b) {
     return a.price * 1 - b.price * 1;
-    // sap xep tang dan: 
-    // neu a < b thi a-b <0 --> a va b giu nguyen vi tri 
+    // sap xep tang dan:
+    // neu a < b thi a-b <0 --> a va b giu nguyen vi tri
     // neu a>b thi a-b>0 --> a va b doi vi tri cho nhau
 }
 
@@ -133,68 +133,69 @@ function sortByValueDecrease(a, b) {
 }
 
 function chiTiet(id) {
-    localStorage.setItem("idProduct", id)
-    let s1, s2 = ''
-    $.each(product, function(k, v) {
-        if (v.id == id) {
-            s1 = `
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="khoi">
-                        <img src="${v.img}" class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6 col-sm-6 col-12">
-                    <div class="khoi">
-                    <a class="data-cart" >
-                    <div class="product-block-container" data-id="${v.id}">
-                        <h1>${v.name}</h1>
-                        <p class="product-block-prices">Price: ${v.price}</p>
-                        <div class="product-block-favourite"></div>
-                        <div class="product-block-bag"></div>
-                        <div class="top-basket-remove" onclick= "Remove(${v.id})">
-                        </div>                    
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                    `
-            s2 = `
-            <div class="col-12">
-            <div class="accordion mt-3" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Descriptions
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        ${v.description}
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Product detail
-            </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        ${v.detail}
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        `
-        }
-    })
-    $('#render1-product').html(s1)
-    $('#render2-product').html(s2)
+    window.location.href = 'detail-product/'+id;
+    // localStorage.setItem("idProduct", id)
+    // let s1, s2 = ''
+    // $.each(product, function(k, v) {
+    //     if (v.id == id) {
+    //         s1 = `
+    //             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+    //                 <div class="khoi">
+    //                     <img src="${v.img}" class="col-lg-12 col-md-12 col-sm-12 col-12">
+    //                 </div>
+    //             </div>
+    //             <div class="col-lg-8 col-md-6 col-sm-6 col-12">
+    //                 <div class="khoi">
+    //                 <a class="data-cart" >
+    //                 <div class="product-block-container" data-id="${v.id}">
+    //                     <h1>${v.name}</h1>
+    //                     <p class="product-block-prices">Price: ${v.price}</p>
+    //                     <div class="product-block-favourite"></div>
+    //                     <div class="product-block-bag"></div>
+    //                     <div class="top-basket-remove" onclick= "Remove(${v.id})">
+    //                     </div>
+    //                     </div>
+    //                     </a>
+    //                 </div>
+    //             </div>
+    //                 `
+    //         s2 = `
+    //         <div class="col-12">
+    //         <div class="accordion mt-3" id="accordionExample">
+    //         <div class="card">
+    //             <div class="card-header" id="headingTwo">
+    //                 <h2 class="mb-0">
+    //                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Descriptions
+    //                     </button>
+    //                 </h2>
+    //             </div>
+    //             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+    //                 <div class="card-body">
+    //                     ${v.description}
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         <div class="card">
+    //             <div class="card-header" id="headingOne">
+    //                 <h2 class="mb-0">
+    //                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Product detail
+    //         </button>
+    //                 </h2>
+    //             </div>
+    //
+    //             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    //                 <div class="card-body">
+    //                     ${v.detail}
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     </div>
+    //     </div>
+    //     `
+    //     }
+    // })
+    // $('#render1-product').html(s1)
+    // $('#render2-product').html(s2)
 }
 
 function brandChanged(obj) {
@@ -205,4 +206,8 @@ function brandChanged(obj) {
     product_timkiem2 = timkiem(product_timkiem1, query2)
     product_timkiem3 = timkiem(product_timkiem2, query3)
     loadData(product_timkiem3)
+}
+
+function redirectToCheckout(url) {
+    window.location.href= url;
 }

@@ -24,9 +24,11 @@ $(function() {
             search_by_name()
         }
     });
-    $('.data-cart').click(function() {
-            alert('ok')
-        })
+
+    // $('.data-cart').click(function() {
+    //         alert('ok')
+    //     })
+
         // Su kien click
     $('#search-button').click(search_all)
         //su kien click--loc theo name
