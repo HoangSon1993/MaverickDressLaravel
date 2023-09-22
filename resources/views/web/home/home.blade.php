@@ -20,7 +20,7 @@ Home-Maverick
 <div class="container-fluid">
     <div class="row" id="top-banner">
         <div class="col-lg-4 col-md-4 col-12" id="top-banner-logo">
-            <a href="./index.html" title="Maverick Dress">
+            <a href="/" title="Maverick Dress">
                 <img src="{{url('./image/logo/MTC_FinalLogos-01.png')}}" alt="">
             </a>
         </div>
@@ -76,7 +76,7 @@ Home-Maverick
                     </div>
                 </div>
             </div>
-            <div class="col-2" id="top-banner-icons-account">
+            <div class="col-3" id="top-banner-icons-account">
                 <a title="My Account" data-toggle="modal" data-target="#modal-account"></a>
                 <div class="modal" id="modal-account">
                     <div class="modal-dialog">
@@ -99,7 +99,7 @@ Home-Maverick
                     </div>
                 </div>
             </div>
-            <div class="col-2" id="top-banner-icons-favourites" onclick="heart()">
+            <div class="col-3" id="top-banner-icons-favourites" onclick="heart()">
                 <a title="My Saved Items" data-toggle="modal" data-target="#modal-heart"><span id="top-banner-icon-favourites-qty"></span></a>
                 <div class="modal" id="modal-heart">
                     <div class="modal-dialog">
@@ -122,7 +122,7 @@ Home-Maverick
                     </div>
                 </div>
             </div>
-            <div class="col-2" id="top-banner-icons-basket">
+            <div class="col-3" id="top-banner-icons-basket">
                 <a title="My Bag" data-toggle="modal" data-target="#modal-bag"><span id="top-banner-icon-basket-qty"></span></a>
                 <div class="modal" id="modal-bag">
                     <div class="modal-dialog">
@@ -315,7 +315,7 @@ Home-Maverick
                 </div>
                 <div class="home-page-brand-logo">
                     <a href="" title="Winterbottom's Schoolwear">
-                        <img src="url('./image/brand/Winterbottoms.png')" alt="Winterbottom's Schoolwear">
+                        <img src="{{url('./image/brand/Winterbottoms.png')}}" alt="Winterbottom's Schoolwear">
                     </a>
                 </div>
                 <div class="home-page-brand-logo">
@@ -330,7 +330,7 @@ Home-Maverick
                 </div>
                 <div class="home-page-brand-logo">
                     <a href="" title="JUCO Sportswear">
-                        <img src="url('./image/brand/JUCO.png)" alt="JUCO Sportswear">
+                        <img src="{{url('./image/brand/JUCO.png')}}" alt="JUCO Sportswear">
                     </a>
                 </div>
                 <div class="home-page-brand-logo">
@@ -416,8 +416,8 @@ Home-Maverick
 @foreach( $products as $item)
             <a class="data-cart" >
                 <div class="product-block-container" data-id="{{$item->id}}">
-                    <img src="{{url($item->img)}}" onclick="chiTiet({{$item->id}})" data-toggle="modal" data-target="#modelChiTietSanPham">
-                    <h2 onclick="chiTiet({{$item->id}})" data-toggle="modal" data-target="#modelChiTietSanPham">{{$item->name}}</h2>
+                    <img src="{{url($item->img)}}" onclick="/*chiTiet({{$item->id}})*/" data-toggle="modal" data-target="#modelChiTietSanPham">
+                    <h2 onclick="/*chiTiet({{$item->id}})*/" data-toggle="modal" data-target="#modelChiTietSanPham">{{$item->name}}</h2>
                     <img class="product-block-favourite" src="./image/logo/Icon-Heart-Outline-32.png" >
                     <img class="product-block-bag" src="./image/logo/Icon-Bag-Outline-32.png" >
                     <p class="product-block-prices">Price: {{$item->price}}</p>

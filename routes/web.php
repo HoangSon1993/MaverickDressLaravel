@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MyController;
 use App\Http\Controllers\Web\WebController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -69,6 +70,9 @@ Route::get('/', function () {
 
 //Bắt đầu tai đây
 
+Route::get('/',function (){
+    return Redirect() -> route('web.home.home');
+});
 Route::get('home',[WebController::class, 'home'])->name('web.home.home');
 
 

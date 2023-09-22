@@ -253,8 +253,7 @@
                     })
                 })
             }
-        })
-    })
+        )
     //modal-tạo-moi--Nut-save__Luu-san-pham
     $(function() {
         $('button.save').click(function() {
