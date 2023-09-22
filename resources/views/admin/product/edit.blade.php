@@ -33,7 +33,7 @@
             </div>
 
             <div class="modal-body">
-                <form action=" {{ route('web.home.update-product', ['id' => $product->id]) }} " method="post" enctype="multipart/form-data">
+                <form action=" {{ route('admin.home.update-product', ['id' => $product->id]) }} " method="post" enctype="multipart/form-data">
                     @csrf
                     @method('put')
                     <div class="form-group">
@@ -51,7 +51,7 @@
                     </div>
                     <div class="form-group">
                         <label for="img"> Hinh URL</label>
-                        <input type="text" name="img" id="edit-img" class="form-control" value="{{$product->img}}">
+                        <input type="text" name="img" id="edit-img" class="form-control" value="{{$product->img}}" readonly>
                         <input type="file" name="" id="" class="form-control" Onchange="xuLyFile()">
                     </div>
                     <div class="form-group">
@@ -86,7 +86,7 @@
 
                     <br>
                     <div class="modal-footer">
-                        <a href="{{route('web.home.get-product')}}" class="btn btn-secondary">Close</a>
+                        <a href="{{route('admin.home.get-product')}}" class="btn btn-secondary">Close</a>
                         <button type="submit" class="btn btn-primary sua" >Submit</button>
                     </div>
                 </form>

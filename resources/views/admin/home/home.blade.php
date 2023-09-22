@@ -7,9 +7,9 @@
 @section('content')
     <body>
     <!-- Button trigger modal -->
-    <a  class="btn btn-primary btn-lg" href="{{route('admin.home.create-product')}}"
+    <a  class="btn btn-info btn-lg" href="{{route('admin.home.create-product')}}"
         {{--    type="button" data-toggle="modal" data-target="#modelIdThemMoi" --}}
-        style="position: fixed; left: 10px; bottom: 20px;"
+        style="position: fixed; right: 40px; bottom: 40px;"
     >Thêm mới
     </a>
     <!------------- MODAL ----------->
@@ -142,7 +142,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar mr-auto mt-2 mt-lg-0" style="list-style: none;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('admin.home.get-product')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -156,6 +156,7 @@
                 </li>
             </ul>
         </div>
+
     </nav>
     {{--chen code php de in ra san pham--}}
     <div class="container">
@@ -178,6 +179,8 @@
                     </tr>
                 @endforeach
             </table>
+            <!-- Hiển thị nút phân trang -->
+            {!! $products->links() !!}
         </div>
     </div>
     </body>
