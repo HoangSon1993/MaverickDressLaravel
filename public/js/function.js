@@ -8,7 +8,6 @@ function loadData(arr) {
         <div class="product-block-container" data-id="${v.id}">
         <img src="${v.img}" onclick="chiTiet(${v.id})" data-toggle="modal" data-target="#modelChiTietSanPham">
         <h2 onclick="chiTiet(${v.id})" data-toggle="modal" data-target="#modelChiTietSanPham">${v.id}-${v.name}</h2>
-        <img class="product-block-favourite" src="./image/logo/Icon-Heart-Outline-32.png" >
         <img class="product-block-bag" src="./image/logo/Icon-Bag-Outline-32.png" >
         <p class="product-block-prices">Price: ${v.price}</p>
         </div>
@@ -72,8 +71,10 @@ function loadData(arr) {
             })
         })
         // SET day
-    const d = new Date();
-    document.getElementById("time").innerHTML = d;
+        intervalId = window.setInterval(function() {
+            var d = new Date();
+            document.getElementById("time").innerHTML = d;
+        }, 1000);
 }
 //   total
 

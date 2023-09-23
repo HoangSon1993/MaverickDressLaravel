@@ -329,7 +329,6 @@ img {
 }
 
 .modal-body .product-block-container .top-basket-remove,
-.modal-body .product-block-container .product-block-favourite,
 .modal-body .product-block-container .product-block-bag {
     display: block;
     background-repeat: no-repeat;
@@ -337,9 +336,6 @@ img {
     width: 15%;
     margin-top: 10px;
     background-position: center center;
-}
-.modal-body .product-block-container .product-block-favourite {
-    background-image: url(../image/logo/Icon-Heart-Outline-32.png);
 }
 .modal-body .product-block-container .product-block-bag {
     background-image: url(../image/logo/Icon-Bag-Outline-32.png);
@@ -402,7 +398,7 @@ img {
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    margin: 0 35px;
+    margin: 0 30px;
 }
 
 .nav-item .nav-item-sale {
@@ -582,7 +578,10 @@ img {
     padding-right: 1em;
 }
 
-
+#top-banner-search .search-button {
+    border: 1px solid #79f081;
+    border-radius: 5px;
+}
 /* 	day la product */
 
 #product-blocks {
@@ -641,9 +640,6 @@ img {
     z-index: 2;
 }
 
-#product-blocks a .product-block-favourite:hover {
-    background-color: #d0d0d0;
-}
 
 #product-blocks a h2 {
     font-size: 15px;
@@ -656,7 +652,6 @@ img {
     display: inline-block;
     height: 20px;
     overflow: hidden;
-    margin-bottom: 60px;
 }
 
 #product-blocks a:hover h2 {

@@ -1,7 +1,7 @@
 <div id="footer" class="container-fluid">
     <div id="footer-inner" class="row">
         <div id="footer-left" class="col-md-8 col-sm-6">
-            Time: &nbsp; <a id="time" href="#">000</a><br>
+            Time: &nbsp;<a id="time" href="#"></a><br>
             Email:&nbsp;<a href="#">ex@ex.com</a>&nbsp;&nbsp; &nbsp;&nbsp;Telephone:&nbsp;    <a href="tel:+441432343532">0000&nbsp;00&nbsp;00&nbsp;00</a>&nbsp;&nbsp;
             <br> Fax:
             <br> Maverick Dress, Moon

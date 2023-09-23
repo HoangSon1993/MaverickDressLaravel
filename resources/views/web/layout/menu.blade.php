@@ -20,7 +20,7 @@
                 @csrf
                 <input class="search-text" type="text" name="search" placeholder="Search Products" maxlength="40"
                        id="search_input">
-                <button  type="submit">Search </button>
+                <button class="search-button"  type="submit"></button>
             </form>
 
         </div>
@@ -387,3 +387,58 @@
         </ul>
     </div>
 </nav>
+
+
+<marquee class="row" behavior="alternate" direction="">
+        <div id="home-page-brands">
+            <div class="home-page-brands-row">
+                <div class="home-page-brand-logo">
+                    <a href="" title="One+All Schoolwear">
+                        <img src="{{url('./image/brand/One-All.png')}}" alt="One+All Schoolwear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="Banner Schoolwear">
+                        <img src="{{url('./image/brand/Banner.png')}}" alt="Banner Schoolwear">
+                    </a>
+                </div>
+
+                <div class="home-page-brand-logo">
+                    <a href="" title="Trutex Schoolwear">
+                        <img src="{{url('./image/brand/Trutex.png')}}" alt="Trutex Schoolwear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="Winterbottom's Schoolwear">
+                        <img src="{{url('./image/brand/Winterbottoms.png')}}" alt="Winterbottom's Schoolwear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="Akoa Sportswear">
+                        <img src="{{url('./image/brand/Akoa.png')}}" alt="Akoa Sportswear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="Falcon Sportswear">
+                        <img src="{{url('./image/brand/Falcon.png')}}" alt="Falcon Sportswear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="JUCO Sportswear">
+                        <img src="{{url('./image/brand/JUCO.png')}}" alt="JUCO Sportswear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="Chadwick Teamwear">
+                        <img src="{{url('./image/brand/Term-Footwear.png')}}" alt="Chadwick Teamwear">
+                    </a>
+                </div>
+                <div class="home-page-brand-logo">
+                    <a href="" title="David Luke Schoolwear">
+                        <img src="{{url('./image/brand/David-Luke.png')}}" alt="David Luke Schoolwear">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </marquee>
+</div>

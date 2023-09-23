@@ -29,9 +29,8 @@
                                     <div class="product-block-container" data-id="${v.id}">
                                              <h3>{{$product->name}}</h3>
                                             <p style="font-size: 16px" class="product-block-prices">Price: {{$product->price}}&#36;</p>
-                                             <div class="product-block-favourite"></div>
                                              <div class="product-block-bag"></div>
-                                             <div class="top-basket-remove" onclick= "Remove(${v.id})">
+                                             <div class="top-basket-remove" onclick= "Remove('${v.id}')">
                                                  </div>
                                              </div>
                                          </a>
@@ -73,8 +72,6 @@
                     </div>
                     <div class=" modal-footer ">
                         <button type="button " class="btn btn-secondary" onclick="redirectToCheckout('{{route('web.home.home')}}')">Close</button>
-
-
                         <form action="{{url('add-to-cart')}}" method="post">
                             @csrf
                             <input type="hidden" name="quantity" value="1">

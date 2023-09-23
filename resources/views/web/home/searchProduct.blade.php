@@ -3,7 +3,6 @@
 @section('title')
     Home-Maverick
 @endsection
-
 @section('content')
 
 <div class="container-fluid">
@@ -11,9 +10,8 @@
 @foreach( $products as $item)
     <a class="data-cart col-md-3 col-sm-6 col-12" >
         <div class="product-block-container" data-id="{{$item->id}}">
-            <img src="{{url($item->img)}}" onclick="chiTiet({{$item->id}})" data-toggle="modal" data-target="#modelChiTietSanPham">
-            <h2 onclick="chiTiet({{$item->id}})" data-toggle="modal" data-target="#modelChiTietSanPham">{{$item->name}}</h2>
-            <img class="product-block-favourite" src="./image/logo/Icon-Heart-Outline-32.png" >
+            <img src="{{url($item->img)}}" onclick="chiTiet('{{$item->id}}')" data-toggle="modal" data-target="#modelChiTietSanPham">
+            <h2 onclick="chiTiet('{{$item->id}}')" data-toggle="modal" data-target="#modelChiTietSanPham">{{$item->name}}</h2>
             <form action="{{url('add-to-cart')}}" method="post">
                 @csrf
                 <input type="hidden" name="quantity" value="1">
